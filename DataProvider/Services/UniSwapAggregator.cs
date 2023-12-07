@@ -50,6 +50,8 @@ public class UniSwapAggregator : IHostedService
                     Interlocked.Increment(ref _count);
                 });
                 _logger.LogInformation("total swaps captured : {Count}", _count);
+                _logger.LogInformation("sleeping for 1 sec");
+                System.Threading.Thread.Sleep(1000);
             }
             catch (Exception e)
             {
