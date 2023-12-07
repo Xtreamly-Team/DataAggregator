@@ -40,11 +40,11 @@ public class UniSwapAggregator : IHostedService
                 swaps.EnsureSuccess();
                 Parallel.ForEach(swaps.ActualValue, swap =>
                 {
+                    if (System.IO.File.Exists($"/uniswap/{swap.Transaction.TxId}")) return;
                     var wrapper = new UniSwapWrapper()
                     {
                         Swap = swap
                     };
-                    if (System.IO.File.Exists($"/uniswap/{swap.Transaction.TxId}")) return;
                     System.IO.File.WriteAllText($"/uniswap/{swap.Transaction.TxId}", System.Text.Json.JsonSerializer.Serialize(wrapper));
                     _logger.LogInformation($"uniswap swap was logged {swap.Transaction.TxId}");
                     Interlocked.Increment(ref _count);
