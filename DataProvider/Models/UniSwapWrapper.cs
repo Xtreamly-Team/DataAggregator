@@ -7,5 +7,5 @@ public readonly struct UniSwapWrapper
 
     public decimal ExecutedPrice => Math.Abs(decimal.Parse(Swap.Amount1) / decimal.Parse(Swap.Amount0));
 
-    public bool IsBuy =>  int.Parse(Swap.Amount0)  > 0;
+    public bool IsBuy =>  decimal.Parse(Swap.Amount0)  > 0;
 }
