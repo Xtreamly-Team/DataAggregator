@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+
+
+  myapp:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    networks:
+      - my-network
+    volumes:
+      - ./uniswap:/uniswap
+    restart: always
+    deploy:
+        resources:
+            limits:
+              memory: 2G
+
+networks:
+  my-network:
+    name: hub
+    driver: bridge
+
+volumes:
+  db_data:
