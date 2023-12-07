@@ -51,7 +51,7 @@ public class UniSwapAggregator : IHostedService
                 });
                 _logger.LogInformation("total swaps captured in current session : {Count}", _count);
                 _logger.LogInformation("total swaps captured ever : {Count}", System.IO.Directory.GetFiles("/uniswap/").Length);
-                _logger.LogInformation("sleeping for 1 sec");
+                _logger.LogInformation("sleeping for 12 sec");
                 System.Threading.Thread.Sleep(12000);
             }
             catch (Exception e)
