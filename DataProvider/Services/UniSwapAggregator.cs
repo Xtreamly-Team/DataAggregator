@@ -49,7 +49,8 @@ public class UniSwapAggregator : IHostedService
                     _logger.LogInformation($"uniswap swap was logged {swap.Transaction.TxId}");
                     Interlocked.Increment(ref _count);
                 });
-                _logger.LogInformation("total swaps captured : {Count}", _count);
+                _logger.LogInformation("total swaps captured in current session : {Count}", _count);
+                _logger.LogInformation("total swaps captured ever : {Count}", System.IO.Directory.GetFiles("/uniswap/").Length);
                 _logger.LogInformation("sleeping for 1 sec");
                 System.Threading.Thread.Sleep(12000);
             }
