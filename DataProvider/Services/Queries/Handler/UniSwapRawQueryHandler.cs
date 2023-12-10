@@ -26,7 +26,7 @@ public class UniSwapRawQueryHandler : IRequestHandler<UniSwapRawQuery, RequestRe
                     skip: 0
                     orderBy: timestamp
                     subgraphError: allow
-                    where: {sender: "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD", token0_: {symbol: "WETH"}, token1_: {symbol: "USDT"}, transaction_: {}}
+                    where: { token0_: {symbol: "WETH"}, token1_: {symbol: "USDT"}, transaction_: {}}
                   ) {
                     amount0
                     sqrtPriceX96
