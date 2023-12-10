@@ -13,7 +13,7 @@ System.IO.Directory.CreateDirectory("/uniswap/");
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-        Path.Combine("/swaps/")),
+        Path.Combine("/uniswap/")),
     RequestPath = "/uniswap-swaps"
 });
 
