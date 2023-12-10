@@ -47,4 +47,34 @@ public class SwapAggregationController : ControllerBase
         }
     }
     
+    
+    [HttpGet]
+    public async Task<IActionResult> UniSwapSaved([FromQuery] string txId )
+    {
+        try
+        {
+            var timer = new Stopwatch();
+            timer.Start();
+
+            if (!System.IO.File.Exists("/uniswap/" + txId))
+            {
+                return NotFound("transaction was not found");
+            }
+
+            var result = System.IO.File.ReadAllText("/uniswap/" + txId);
+
+            return Ok(new
+            {
+                result = result,
+                time = timer.ElapsedMilliseconds + " ms"
+            });
+
+
+        }
+        catch (Exception e)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, e.Message);
+        }
+    }
+    
 }
