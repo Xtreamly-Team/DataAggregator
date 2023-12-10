@@ -48,6 +48,7 @@ public class UniSwapRawQueryHandler : IRequestHandler<UniSwapRawQuery, RequestRe
                       gasUsed
                       id
                       timestamp
+                      blockNumber
                     }
                   }
                 }

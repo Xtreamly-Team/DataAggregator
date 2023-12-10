@@ -93,6 +93,10 @@ namespace DataProvider
         [JsonPropertyName("timestamp")]
         [JsonConverter(typeof(ParseStringConverter))]
         public long Timestamp { get; set; }
+        
+        [JsonPropertyName("blockNumber")]
+        [JsonConverter(typeof(ParseStringConverter))]
+        public long BlockNumber { get; set; }
     }
 
     public partial class CommittedSwapsDto
