@@ -20,7 +20,6 @@ public class UniSwapAggregator : IHostedService
 
     public async Task StartAsync(CancellationToken cancellationToken)
     {
-        System.IO.Directory.CreateDirectory("/uniswap/");
         _worker = new Thread(runner)
         {
             Priority = ThreadPriority.Highest
