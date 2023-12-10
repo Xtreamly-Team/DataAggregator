@@ -65,7 +65,7 @@ public class SwapAggregationController : ControllerBase
 
             return Ok(new
             {
-                result = result,
+                result = System.Text.Json.JsonSerializer.Deserialize<dynamic>(result),
                 time = timer.ElapsedMilliseconds + " ms"
             });
 
