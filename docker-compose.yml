@@ -19,7 +19,7 @@ services:
       rpc: "https://ethereum-mainnet.core.chainstack.com/8da63f2e1ff83e36b4efd84a14abef6b"
       influxdbAddress: "http://data.xtreamly.io:8086"
       organization: "xtreamly"
-      secret: "5FM85oNbdo9lMGjTpe6ykga4YF_dpW_3Uv3OshRdoDJRscchrDeLqub8jaCX26wqNJMCiAoLfIb5eZnvdnQKCA=="
+      secret: "wMzcazXSzso8m3xeQ66mtsfnvJp96SMoq-3kQHgd-D5FuzyHbcQidKqYXWx6OEh2SjFVDQD3JNVmFiP7yT-tiw=="
 
 networks:
   my-network:
