@@ -1,5 +1,4 @@
 using DataProvider.Models;
-using DataProvider.Models.GraphQLRequests;
 using Mediator;
 
 namespace DataProvider.Services.Queries.Handler;

@@ -1,7 +1,5 @@
 version: '3.8'
 services:
-
-
   myapp:
     build:
       context: ./
@@ -17,6 +15,11 @@ services:
         resources:
             limits:
               memory: 2G
+    environment:
+      rpc: "https://ethereum-mainnet.core.chainstack.com/8da63f2e1ff83e36b4efd84a14abef6b"
+      influxdbAddress: "http://localhost:8086"
+      organization: "xtreamly"
+      secret: "5FM85oNbdo9lMGjTpe6ykga4YF_dpW_3Uv3OshRdoDJRscchrDeLqub8jaCX26wqNJMCiAoLfIb5eZnvdnQKCA=="
 
 networks:
   my-network:

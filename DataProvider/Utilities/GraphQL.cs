@@ -1,4 +1,3 @@
-using DataProvider.Models.GraphQLRequests;
 using DataProvider.Models.Interfaces;
 using Newtonsoft.Json;
 

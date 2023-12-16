@@ -2,6 +2,7 @@ using System.Diagnostics;
 using DataProvider.Services.Queries;
 using Mediator;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 
 namespace DataProvider.Controllers.v1;
 
@@ -11,13 +12,10 @@ namespace DataProvider.Controllers.v1;
 public class SwapAggregationController : ControllerBase
 {
     private readonly IMediator _mediator;
-
     public SwapAggregationController(IMediator mediator)
     {
         _mediator = mediator;
     }
-
-    
     [HttpGet]
     public async Task<IActionResult> UniSwapRaw([FromQuery] int count = 10)
     {
@@ -46,8 +44,6 @@ public class SwapAggregationController : ControllerBase
             return StatusCode(StatusCodes.Status500InternalServerError, e.Message);
         }
     }
-    
-    
     [HttpGet]
     public async Task<IActionResult> UniSwapSaved([FromQuery] string txId )
     {

@@ -12,28 +12,46 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5224",
       "environmentVariables": {
+        "rpc" : "https://ethereum-mainnet.core.chainstack.com/8da63f2e1ff83e36b4efd84a14abef6b",
+        "influxdbAddress": "http://localhost:8086",
+        "organization" : "xtreamly",
+        "secret" : "5FM85oNbdo9lMGjTpe6ykga4YF_dpW_3Uv3OshRdoDJRscchrDeLqub8jaCX26wqNJMCiAoLfIb5eZnvdnQKCA==",
+
+
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7189;http://localhost:5224",
       "environmentVariables": {
+        "rpc" : "https://ethereum-mainnet.core.chainstack.com/8da63f2e1ff83e36b4efd84a14abef6b",
+        "influxdbAddress": "http://localhost:8086",
+        "organization" : "xtreamly",
+        "secret" : "5FM85oNbdo9lMGjTpe6ykga4YF_dpW_3Uv3OshRdoDJRscchrDeLqub8jaCX26wqNJMCiAoLfIb5eZnvdnQKCA==",
+
+
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
       "environmentVariables": {
+        "rpc" : "https://ethereum-mainnet.core.chainstack.com/8da63f2e1ff83e36b4efd84a14abef6b",
+        "influxdbAddress": "http://localhost:8086",
+        "organization" : "xtreamly",
+        "secret" : "5FM85oNbdo9lMGjTpe6ykga4YF_dpW_3Uv3OshRdoDJRscchrDeLqub8jaCX26wqNJMCiAoLfIb5eZnvdnQKCA==",
+
+
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
